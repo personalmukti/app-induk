@@ -70,13 +70,6 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $phone = Phone::find(1);
-
-        $user = User::find(10);
-
-        $phone->user()->associate($user)->save();
-
-
         $user = User::find($id);
         return view('users.show', compact('user'));
     }
